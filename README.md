@@ -28,3 +28,4 @@ This web application allows users to upload images of plants, birds, or animals 
 - CSS3
 - JavaScript (ES6+)
 - Google Gemini API
+"# nature-lens-ai" 
