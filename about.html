@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Nature Lens AI</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/mission.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .feature-card, .team-card {
+            perspective: 1000px;
+            height: 300px;
+            position: relative;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            margin: 1rem 0;
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, #4CAF50, #2196F3);
+            color: white;
+        }
+
+        .feature-card:hover, .team-card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-transition"></div>
+    <nav class="top-nav">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link active">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="app-header">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <h1>Nature Lens AI</h1>
+            </div>
+            <p class="tagline">Discover the wonders of nature through AI</p>
+        </header>
+
+        <main class="main-content">
+            <section class="about-hero animate-fade-in">
+                <h1 class="about-title animate-slide-up">Exploring Nature Through AI</h1>
+                <p class="about-subtitle animate-slide-up-delay">Unlocking the secrets of the natural world with advanced artificial intelligence</p>
+                <div class="hero-line animate-scale"></div>
+            </section>
+
+            <section class="about-features">
+                <h2>Our Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="card-front">
+                            <div class="feature-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h3>Plant Recognition</h3>
+                            <p>Instantly identify thousands of plant species with our advanced AI technology</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>How it works</h3>
+                            <p>Upload any plant photo and get instant identification with 99% accuracy</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="card-front">
+                            <div class="feature-icon">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <h3>Image Analysis</h3>
+                            <p>Deep learning algorithms that understand and analyze natural imagery</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Advanced Features</h3>
+                            <p>Get detailed insights about species, habitats, and ecological information</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="card-front">
+                            <div class="feature-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Smart Detection</h3>
+                            <p>Advanced object detection and scene understanding capabilities</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>AI Powered</h3>
+                            <p>Real-time detection and analysis of natural environments</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mission-section">
+                <div class="mission-background"></div>
+                <div class="mission-content">
+                    <i class="fas fa-globe mission-icon"></i>
+                    <h2 class="mission-title">Our Mission</h2>
+                    <p class="mission-text">At Nature Lens AI, we're passionate about connecting people with the natural world through technology. Our mission is to make nature exploration and identification accessible to everyone, powered by cutting-edge AI.</p>
+                </div>
+                <!-- Add some particles for visual effect -->
+                <div class="mission-particle" style="top: 20%; left: 10%"></div>
+                <div class="mission-particle" style="top: 60%; left: 80%"></div>
+                <div class="mission-particle" style="top: 80%; left: 30%"></div>
+                <div class="mission-particle" style="top: 40%; left: 70%"></div>
+                <div class="mission-particle" style="top: 30%; left: 90%"></div>
+            </section>
+
+            <section class="about-team">
+                <h2 class="section-title animate-fade-in">Meet Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="card-front">
+                            <div class="team-image">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <h3>Dr. Somesh sarje</h3>
+                            <p>AI Research Lead</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Expertise</h3>
+                            <p>3+ years in AI & Machine Learning Research</p>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="card-front">
+                            <div class="team-image">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <h3>Kartick Sarje</h3>
+                            <p>Lead Developer</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Skills</h3>
+                            <p>Full-stack development & AI implementation</p>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="card-front">
+                            <div class="team-image">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <h3>Rudra sarje</h3>
+                            <p>UX Designer</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Specialty</h3>
+                            <p>Creating intuitive & beautiful user experiences</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>Powered by Saam AI</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2024 Saam AI. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

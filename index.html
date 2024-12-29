@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Lens AI</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-transition"></div>
+    <nav class="top-nav">
+        <div class="nav-links">
+            <a href="index.html" class="active nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="app-header">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <h1>Nature Lens AI</h1>
+            </div>
+            <p class="tagline">Discover the wonders of nature through AI</p>
+        </header>
+
+        <main class="main-content">
+            <div class="upload-section">
+                <div class="section-tabs">
+                    <button class="tab-btn active" data-tab="upload">
+                        <i class="fas fa-upload"></i> Upload Image
+                    </button>
+                    <button class="tab-btn" data-tab="camera">
+                        <i class="fas fa-camera"></i> Take Photo
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="uploadTab">
+                    <div class="upload-container" id="uploadContainer">
+                        <div class="upload-area" id="dropZone">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <h3>Upload Image</h3>
+                            <p>Drag and drop your image here or</p>
+                            <input type="file" id="fileInput" accept="image/*" hidden>
+                            <button id="uploadButton" class="primary-button">
+                                <i class="fas fa-image"></i>
+                                Choose File
+                            </button>
+                            <p class="file-info">Supports: JPEG, PNG (Max 4MB)</p>
+                        </div>
+                        
+                        <div class="preview-container" id="previewContainer" hidden>
+                            <div class="preview-header">
+                                <h3>Image Preview</h3>
+                                <button id="newUploadButton" class="icon-button">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="image-preview-wrapper">
+                                <img id="imagePreview" alt="Preview">
+                            </div>
+                            <button id="analyzeButton" class="primary-button">
+                                <i class="fas fa-magic"></i>
+                                Analyze Image
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="cameraTab">
+                    <div class="camera-container">
+                        <div class="camera-preview">
+                            <video id="videoElement" autoplay playsinline></video>
+                            <canvas id="canvasElement" hidden></canvas>
+                            <div class="camera-overlay">
+                                <div class="focus-ring"></div>
+                            </div>
+                        </div>
+                        <div class="camera-controls">
+                            <button id="switchCameraBtn" class="icon-button" title="Switch Camera">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                            <button id="captureBtn" class="primary-button">
+                                <i class="fas fa-camera"></i> Capture
+                            </button>
+                        </div>
+                        <div class="camera-preview-container" hidden>
+                            <img id="capturedImage" alt="Captured photo">
+                            <div class="preview-controls">
+                                <button id="retakeBtn" class="secondary-button">
+                                    <i class="fas fa-redo"></i> Retake
+                                </button>
+                                <button id="usePhotoBtn" class="primary-button">
+                                    <i class="fas fa-check"></i> Use Photo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-container" id="resultContainer" hidden>
+                <div class="loader" id="loader" hidden>
+                    <div class="spinner"></div>
+                    <p>Analyzing your image with AI...</p>
+                </div>
+                <div class="results" id="results">
+                    <div class="results-header">
+                        <h2>Analysis Results</h2>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="results-content" id="resultsContent"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>Powered by Saam AI</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </footer>
+    </div>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
